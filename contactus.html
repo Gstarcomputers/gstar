@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - G-Star Computer Centre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        header img {
+            max-height: 80px;
+        }
+        header .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header h1 {
+            font-family: 'Impact', sans-serif;
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: 100px;
+        }
+        .contact-info {
+            flex: 1;
+            margin-right: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-info h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .contact-info .contact-item {
+            margin-bottom: 15px;
+        }
+        .contact-info .whatsapp-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #25d366; /* WhatsApp color */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .contact-info .whatsapp-link:hover {
+            background-color: #128c7e; /* Darker WhatsApp color */
+        }
+        .map-container {
+            flex: 1;
+            display: flex;
+            align-items: stretch;
+            min-height: 300px;
+        }
+        .map-container iframe {
+            width: 100%;
+            border: 0;
+            height: 100%;
+        }
+        .home-link {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            font-size: 1.2em;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+        .home-link:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .contact-info h2 {
+                font-size: 2em;
+            }
+            .contact-info p {
+                font-size: 1em;
+            }
+            .contact-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .contact-info {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 100%;
+            }
+            .map-container {
+                width: 100%;
+                min-height: 250px;
+            }
+            .home-link {
+                font-size: 1em;
+                padding: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img {
+                max-height: 60px;
+            }
+            header h1 {
+                font-size: 1.5em;
+            }
+            header p {
+                font-size: 0.9em;
+            }
+            .contact-info h2 {
+                font-size: 1.5em;
+            }
+            .contact-info p {
+                font-size: 0.9em;
+            }
+            .contact-container {
+                padding: 10px;
+            }
+            .home-link {
+                width: 100%;
+                font-size: 0.9em;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="G-Star Computer Centre Logo">
+        <div class="container">
+            <h1>G-Star Computer Centre</h1>
+            <p>Your One-Stop Solution for All Online Services</p>
+        </div>
+    </header>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <div class="contact-item">
+                <p><strong>Online Services:</strong></p>
+                <p>+91 94433 89907</p>
+            </div>
+            <div class="contact-item">
+                <p><strong>Offline Education:</strong></p>
+                <p>+91 89036 89909</p>
+            </div>
+            <div class="contact-item">
+                <p><strong>Online Education:</strong></p>
+                <p>+91 85261 89314</p>
+            </div>
+            <div class="contact-item">
+                <p><strong>CSC Services:</strong></p>
+                <p>+91 89036 89908</p>
+            </div>
+            <div class="contact-item">
+                <p><strong>E-Sevai:</strong></p>
+                <p>+91 90036 89908</p>
+            </div>
+            <div class="contact-item">
+                <p><strong>Fastag Enquiry:</strong></p>
+                <p>+91 95664 59906</p>
+            </div>
+            <div class="contact-item">
+                <p><strong>Email:</strong></p>
+                <p><a href="mailto:gstarcomputercentre@gmail.com">gstarcomputercentre@gmail.com</a></p>
+                <p><a href="mailto:gstar.tpr@gmail.com">gstar.tpr@gmail.com</a></p>
+            </div>
+            <!-- WhatsApp link -->
+            <a href="https://wa.me/919443389907" class="whatsapp-link" target="_blank">Chat with us on WhatsApp</a>
+        </div>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d978.6592787401146!2d77.30830525093256!3d11.140380928141932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba906955d2230bf%3A0x31fbacab7927a51a!2sG-Star%20Computer%20Centre!5e0!3m2!1sen!2sin!4v1724839550168!5m2!1sen!2sin" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <a href="index.html" class="home-link">Back to Home</a>
+    <footer>
+        <p>&copy; 2024 G-Star Computer Centre | 
+        <a href="privacy-policy.html">Privacy Policy</a> | 
+        <a href="contactus.html">Contact Us</a></p>
+    </footer>
+</body>
+</html>

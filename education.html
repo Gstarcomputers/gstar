@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Services - G-Star Computer Centre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        header img {
+            max-height: 80px;
+            margin-right: 20px;
+        }
+        header .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header h1 {
+            font-family: 'Impact', sans-serif;
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        .content {
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .services-links {
+            display: flex;
+            flex-wrap: wrap; /* Allow wrapping of boxes to the next line */
+            gap: 20px;
+            justify-content: center;
+        }
+        .link-box, .dropdown-button {
+            width: 380px; /* Adjusted width for better fit */
+            height: 150px; /* Consistent height for uniform size */
+            display: flex;
+            align-items: center; /* Align items vertically center */
+            background: white;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            text-align: left; /* Align text to the left */
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 20px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+            font-family: 'Cooper Black', Arial, sans-serif; /* Use Cooper Black font */
+        }
+        .link-box img, .dropdown-button img {
+            max-height: 60px; /* Default size for images */
+            margin-right: 15px; /* Space between image and text */
+        }
+        /* Specific styles for 8.png image */
+        .link-box img[src="8.png"] {
+            max-height: 60px; /* Smaller size for 8.png */
+        }
+        .link-box:hover, .dropdown-button:hover {
+            background-color: #3498db;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-button {
+            display: flex;
+            align-items: center;
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 20px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            background: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-family: 'Cooper Black', Arial, sans-serif;
+            height: 100%; /* Full height of the container */
+            box-sizing: border-box;
+            position: relative;
+        }
+        .dropdown-button img {
+            max-height: 60px; /* Ensure consistent size for dropdown image */
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100%; /* Full width of the container */
+            box-sizing: border-box;
+            top: 100%;
+            left: 0;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        .dropdown-content a {
+            display: block;
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 15px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            margin: 5px 0;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+            width: 100%; /* Full width of the container */
+        }
+/* General styles for dropdown content images */
+.dropdown-content img {
+    max-height: 40px; /* Adjust the max height as needed */
+    vertical-align: middle; /* Align image vertically in the middle */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.dropdown-content a img[src="13.png"] {max-height: 30px; }
+.dropdown-content a img[src="14.png"] {max-height: 30px; }
+.dropdown-content a img[src="15.png"] {
+    max-height: 30px; }
+.dropdown-content a img[src="16.png"] {
+    max-height: 30px; }
+.dropdown-content a img[src="17.png"] {
+    max-height: 30px; }
+.dropdown-content a img[src="18.png"] {
+    max-height: 30px; }
+.dropdown-content a img[src="19.png"] {
+    max-height: 30px; }
+.dropdown-content a img[src="20.png"] {
+    max-height: 30px; }
+.dropdown-content a img[src="21.png"] {
+    max-height: 30px; }
+.dropdown-content a img[src="22.png"] {
+    max-height: 30px; }
+.dropdown-content a img[src="23.jpg"] {
+    max-height: 30px; }
+.dropdown-content a img[src="24.png"] {
+    max-height: 30px; }
+.dropdown-content a img[src="25.png"] {
+    max-height: 30px; }
+.dropdown-content a img[src="26.png"] {
+    max-height: 30px; }
+.dropdown-content a img[src="27.png"] {
+    max-height: 30px; }
+.dropdown-content a img[src="28.png"] {
+    max-height: 30px; }
+.dropdown-content a img[src="29.png"] {
+    max-height: 30px; } 
+.dropdown-content a img[src="python.png"] {
+    max-height: 30px; }
+.dropdown-content a img[src="html.png"] {
+    max-height: 30px; }
+
+        .dropdown-content a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="G-Star Computer Centre Logo">
+        <div class="container">
+            <h1>G-Star Computer Centre</h1>
+            <p>Your One-Stop Solution for All Online Services</p>
+        </div>
+    </header>
+    <div class="content">
+        <center><h2>Packages</h2><center>
+              
+        <!-- Service Links -->
+        <div class="services-links">
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="coa.png" alt="Service Charges">
+                    certificate in office automation
+                </a>
+                <div class="dropdown-content">
+                    <a href="#"><img src="22.png" alt="Tally ERP9"> computer basics</a>
+                   <a href="#"><img src="13.png" alt="Tally ERP9"> ms office</a>
+ 	<a href="#"><img src="23.jpg" alt="Tally ERP9"> operating syatem</a>
+ 	 <a href="#"><img src="24.png" alt="Tally ERP9">internet basics</a>
+	 <a href="#"><img src="25.png" alt="Tally ERP9">email</a>
+	 <a href="#"><img src="26.png" alt="Tally ERP9">notepad</a>
+	 <a href="#"><img src="27.png" alt="Tally ERP9">paint</a>
+	
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="doa.png" alt="Agent Login">
+                  Diploma in Office Automation
+                </a>
+                <div class="dropdown-content">
+                    <a href="#"><img src="28.png" alt="Tally ERP9">online services</a>
+                   <a href="#"><img src="22.png" alt="Tally ERP9"> computer basics</a>
+                   <a href="#"><img src="13.png" alt="Tally ERP9"> ms office</a>
+ 	<a href="#"><img src="23.jpg" alt="Tally ERP9"> operating syatem</a>
+ 	 <a href="#"><img src="24.png" alt="Tally ERP9">internet basics</a>
+	 <a href="#"><img src="25.png" alt="Tally ERP9">email</a>
+	 <a href="#"><img src="26.png" alt="Tally ERP9">notepad</a>
+	 <a href="#"><img src="27.png" alt="Tally ERP9">paint</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="ddtp.png" alt="Bill Payment">
+                    Diploma in Desktop Publishing
+                </a>
+                <div class="dropdown-content">
+                    <a href="#"><img src="14.png" alt="Tally ERP9">corel draw</a>
+	<a href="#"><img src="15.png" alt="Tally ERP9">photoshop</a>
+                    <a href="#"><img src="22.png" alt="Tally ERP9"> computer basics</a>
+                   <a href="#"><img src="13.png" alt="Tally ERP9"> ms office</a>
+ 	<a href="#"><img src="23.jpg" alt="Tally ERP9"> operating syatem</a>
+ 	 <a href="#"><img src="24.png" alt="Tally ERP9">internet basics</a>
+	 <a href="#"><img src="25.png" alt="Tally ERP9">email</a>
+	 <a href="#"><img src="26.png" alt="Tally ERP9">notepad</a>
+	 <a href="#"><img src="27.png" alt="Tally ERP9">paint</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="dcfa.png" alt="TN Government Payments">
+                    diploma in computer financial accounting
+                </a>
+                <div class="dropdown-content">
+	 <a href="#"><img src="21.png" alt="Tally ERP9"> Tally ERP9</a>
+	   <a href="#"><img src="22.png" alt="Tally ERP9"> computer basics</a>
+                   <a href="#"><img src="13.png" alt="Tally ERP9"> ms office</a>
+ 	<a href="#"><img src="23.jpg" alt="Tally ERP9"> operating syatem</a>
+ 	 <a href="#"><img src="24.png" alt="Tally ERP9">internet basics</a>
+	 <a href="#"><img src="25.png" alt="Tally ERP9">email</a>
+	 <a href="#"><img src="26.png" alt="Tally ERP9">notepad</a>
+	 <a href="#"><img src="27.png" alt="Tally ERP9">paint</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="pgdca.png" alt="TNESEVAI">
+                   Diploma in Computer Application
+                </a>
+                <div class="dropdown-content">
+       	 <a href="#"><img src="19.png" alt="Tally ERP9"> c++ language</a>
+	   <a href="#"><img src="16.png" alt="Tally ERP9"> computer basics</a>
+                   <a href="#"><img src="13.png" alt="Tally ERP9"> ms office</a>
+ 	<a href="#"><img src="23.jpg" alt="Tally ERP9"> operating syatem</a>
+ 	 <a href="#"><img src="24.png" alt="Tally ERP9">internet basics</a>
+	 <a href="#"><img src="25.png" alt="Tally ERP9">email</a>
+	 <a href="#"><img src="26.png" alt="Tally ERP9">notepad</a>
+	 <a href="#"><img src="27.png" alt="Tally ERP9">paint</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="pgdca.png" alt="TNPDS">
+                   Post Graduate Diploma in Computer Application
+                </a>
+                <div class="dropdown-content">
+           <a href="#"><img src="21.png" alt="Tally ERP9"> Tally ERP9</a>
+   	<a href="#"><img src="html.png" alt="Tally ERP9"> html</a>
+   	<a href="#"><img src="19.png" alt="Tally ERP9"> c++ language</a>
+   	<a href="#"><img src="18.png" alt="Tally ERP9"> c language</a>
+	   <a href="#"><img src="python.png" alt="Tally ERP9"> python</a>
+   	<a href="#"><img src="20.png" alt="Tally ERP9"> java</a>
+	   <a href="#"><img src="16.png" alt="Tally ERP9"> computer basics</a>
+                   <a href="#"><img src="13.png" alt="Tally ERP9"> ms office</a>
+ 	<a href="#"><img src="23.jpg" alt="Tally ERP9"> operating syatem</a>
+ 	 <a href="#"><img src="24.png" alt="Tally ERP9">internet basics</a>
+	 <a href="#"><img src="25.png" alt="Tally ERP9">email</a>
+	 <a href="#"><img src="26.png" alt="Tally ERP9">notepad</a>
+	 <a href="#"><img src="27.png" alt="Tally ERP9">paint</a>
+                </div>
+            </a>
+        </div>
+        </div>
+        <br><br><center><h2>COURSES</h2><center>
+
+        <div class="services-links">
+            <a href="ms-office.html" class="link-box">
+                <img src="13.png" alt="MS Office">
+                <span>MS Office</span>
+            </a>
+            <a href="coraldraw.html" class="link-box">
+                <img src="14.png" alt="Coraldraw">
+                <span>Coraldraw</span>
+            </a>
+            <a href="photoshop.html" class="link-box">
+                <img src="15.png" alt="Photoshop">
+                <span>Photoshop</span>
+            </a>
+            <a href="tally-prime.html" class="link-box">
+                <img src="16.png" alt="Tally Prime 4.0">
+                <span>Tally Prime 4.0</span>
+            </a>
+            <a href="tally-erp9.html" class="link-box">
+                <img src="21.png" alt="Tally ERP 9">
+                <span>Tally ERP 9</span>
+            </a>
+            <a href="html.html" class="link-box">
+                <img src="17.png" alt="HTML">
+                <span>HTML</span>
+            </a>
+            <a href="c-language.html" class="link-box">
+                <img src="18.png" alt="C Language">
+                <span>C Language</span>
+            </a>
+            <a href="cpp-language.html" class="link-box">
+                <img src="19.png" alt="C++ Language">
+                <span>C++ Language</span>
+            </a>
+            <a href="python.html" class="link-box">
+                <img src="python.png" alt="Python">
+                <span>Python</span>
+            </a>
+            <a href="java.html" class="link-box">
+                <img src="20.png" alt="Java">
+                <span>Java</span>
+            </a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 G-Star Computer Centre | <a href="privacy-policy.html">Privacy Policy</a> | <a href="contactus.html">Contact Us</a></p>
+    </footer>
+</body>
+</html>
+

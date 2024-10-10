@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Services - G-Star Computer Centre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-direction: column;
+        }
+        header img {
+            max-height: 80px;
+            margin-right: 20px;
+        }
+        header .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header h1 {
+            font-family: 'Impact', sans-serif;
+            font-size: 3em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        .content {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .services-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-button {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            background: white;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            text-align: left;
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 15px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            font-family: 'Cooper Black', Arial, sans-serif;
+        }
+        .dropdown-button img {
+            max-height: 50px;
+            margin-right: 15px;
+        }
+        .dropdown-button:hover {
+            background-color: #3498db;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            border-radius: 8px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            top: 100%;
+            left: 0;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        .dropdown-content a {
+            display: block;
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 10px;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            margin: 5px 0;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+            width: 100%;
+        }
+        .dropdown-content a:hover {
+            background-color: #3498db;
+            color: white;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media queries for mobile devices */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .dropdown-button {
+                font-size: 1em;
+                padding: 10px;
+            }
+            .dropdown-button img {
+                max-height: 40px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 0.9em;
+            }
+            .content {
+                width: 95%;
+                padding: 10px;
+            }
+            .dropdown-button {
+                font-size: 0.9em;
+                padding: 8px;
+            }
+            .dropdown-button img {
+                max-height: 30px;
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="G-Star Computer Centre Logo">
+        <div class="container">
+            <h1>G-Star Computer Centre</h1>
+            <p>Your One-Stop Solution for All Online Services</p>
+        </div>
+    </header>
+    <div class="content">
+        <h2>General Services</h2>
+        <p>At G-Star Computer Centre, we offer a wide range of general services to meet your technical needs. Whether you need assistance with hardware, software, or other technology-related issues, our experienced team is here to help.</p>
+        
+        <!-- Service Links -->
+        <div class="services-links">
+            <!-- General Services -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="general-services.png" alt="General Services">
+                    General Services
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">Print Out</a>
+                    <a href="#">Xerox</a>
+                    <a href="#">Scan</a>
+                    <a href="#">Money Transfer</a>
+                    <a href="#">Lamination</a>
+                    <a href="#">PVC Card</a>
+                    <a href="#">Plastic Card</a>
+                    <a href="#">Photo Print</a>
+                    <a href="#">Pendrive Copy</a>
+                    <a href="#">CD Writing</a>
+                    <a href="#">Spiral Binding</a>
+                    <a href="#">Calico Binding</a>
+                </div>
+            </div>
+            <!-- ID Services -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="id-services.png" alt="ID Services">
+                    ID Services
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">PAN Card</a>
+                    <a href="#">Voter ID</a>
+                    <a href="#">Aadhar</a>
+                </div>
+            </div>
+            <!-- SBI Services -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="sbi-services.png" alt="SBI Services">
+                    SBI Services
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">Account Opening</a>
+                    <a href="#">Statement Download</a>
+                    <a href="#">Pass Book</a>
+                    <a href="#">Fund Transfer</a>
+                </div>
+            </div>
+            <!-- Documentation Services -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="documentation-services.png" alt="Documentation Services">
+                    Documentation Services
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">EC</a>
+                    <a href="#">Patta</a>
+                    <a href="#">Chitta</a>
+                    <a href="#">Tamil Typing</a>
+                    <a href="#">English Typing</a>
+                    <a href="#">Typing Correction</a>
+                    <a href="#">Type Editing</a>
+                </div>
+            </div>
+            <!-- Devotional Services -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="devotional-services.png" alt="Devotional Services">
+                    Devotional Services
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">Tirupathi Dharisanam</a>
+                    <a href="#">Sabarimalai Dharisanam</a>
+                    <a href="#">Jatagam</a>
+                </div>
+            </div>
+          
+            <!-- Vehicle Services -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="vehicle-services.png" alt="Vehicle Services">
+                    Vehicle Services
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">New Fastag</a>
+                    <a href="#">Fastag Renewal</a>
+                    <a href="#">Insurance</a>
+                    <a href="#">Driving Licence</a>
+                    <a href="#">LLR</a>
+                    <a href="#">Vehicle Tax</a>
+                    <a href="#">Eway Bill</a>
+                </div>
+            </div>
+            <!-- Certification Services -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="certification-services.png" alt="Certification Services">
+                    Certification Services
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">Birth Certificate</a>
+                    <a href="#">Community Certificate</a>
+                    <a href="#">Nativity Certificate</a>
+                    <a href="#">Income Certificate</a>
+                    <a href="#">Udhayam Certificate</a>
+                    <a href="#">Life Certificate</a>
+                    <a href="#">Unmarried Certificate</a>
+                    <a href="#">Death Certificate</a>
+                </div>
+            </div>
+            <!-- EB Services -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="eb-services.png" alt="EB Services">
+                    EB Services
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">New Connection</a>
+                    <a href="#">Name Transfer</a>
+                    <a href="#">Load Addition</a>
+                    <a href="#">Load Deduction</a>
+                </div>
+            </div>
+            <!-- Insurance -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="insurance.png" alt="Insurance">
+                    Insurance
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">Life Insurance</a>
+                    <a href="#">Medical Insurance</a>
+                    <a href="#">Vehicle Insurance</a>
+                    <a href="#">PM-JAY Card</a>
+                    <a href="#">CM-Health Card</a>
+                </div>
+            </div>
+            <!-- Ticket Booking -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="ticket-booking.png" alt="Ticket Booking">
+                    Ticket Booking
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">Train Ticket Booking</a>
+                    <a href="#">Bus Ticket Booking</a>
+                    <a href="#">Flight Ticket Booking</a>
+                    <a href="#">Tirupathi Dharisanam Ticket</a>
+                    <a href="#">Sabarimalai Dharisanam Ticket</a>
+                </div>
+            </div>
+            <!-- Tax Payment -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="tax-payment.png" alt="Tax Payment">
+                    Tax Payment
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">EB Tax</a>
+                    <a href="#">Water Tax</a>
+                    <a href="#">Land Tax</a>
+                    <a href="#">Property Tax</a>
+                    <a href="#">House Tax</a>
+                </div>
+            </div>
+            <!-- Education Services -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="education-services.png" alt="Education Services">
+                    Education Services
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">TNPSC</a>
+                    <a href="#">TET</a>
+                    <a href="#">SET</a>
+                    <a href="#">NET</a>
+                    <a href="#">TNEA</a>
+                    <a href="#">MMBS</a>
+                    <a href="#">Exam Result</a>
+                    <a href="#">Exam Fee Payment</a>
+                    <a href="#">Hostel Fee Payment</a>
+                    <a href="#">College Fee Payment</a>
+                    <a href="#">Employment Registration</a>
+                    <a href="#">Education Loan Apply</a>
+                </div>
+            </div>
+            <!-- Smart Card -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="smart-card.png" alt="Smart Card">
+                    Smart Card
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">Add Member</a>
+                    <a href="#">Remove Member</a>
+                    <a href="#">Name Correction</a>
+                    <a href="#">Address Change</a>
+                    <a href="#">Card Replacement Apply</a>
+                </div>
+            </div>
+            <!-- Revenue Services -->
+            <div class="dropdown">
+                <a href="#" class="dropdown-button">
+                    <img src="revenue-services.png" alt="Revenue Services">
+                    Revenue Services
+                </a>
+                <div class="dropdown-content">
+                    <a href="#">Tax Payment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 G-Star Computer Centre | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a></p>
+    </footer>
+</body>
+</html>

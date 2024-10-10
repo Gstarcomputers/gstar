@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Star Computer Centre</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        header img {
+            max-height: 80px;
+            margin-bottom: 10px;
+        }
+        header h1 {
+            font-family: 'Impact', sans-serif;
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        .nav-links {
+            margin-top: 10px;
+        }
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.8em;
+            padding: 8px 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            background: none;
+            border: none;
+            border-radius: 0;
+            margin: 0 5px;
+        }
+        .nav-links a:hover {
+            background: #3498db;
+            color: #ffffff;
+        }
+        .hero {
+            background: url('ratio.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .services {
+            background-color: #fff;
+            color: #333;
+            padding: 50px 0;
+            text-align: center;
+        }
+        .services h2 {
+            margin: 0;
+            font-size: 2em;
+            margin-bottom: 30px;
+        }
+        .services .service-link {
+            display: inline-block;
+            margin: 10px;
+            padding: 20px;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            background-color: #fff;
+            color: #333;
+            text-align: center;
+            width: calc(50% - 40px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+        }
+        .services .service-link h3 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+        .services .service-link p {
+            margin: 10px 0;
+        }
+        .services .service-link:hover {
+            background-color: #f0f8ff;
+        }
+        .services .service-link a {
+            color: #3498db;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        .services .service-link a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #ecf0f1;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            .hero h1 {
+                font-size: 2em;
+            }
+            .hero p {
+                font-size: 1em;
+            }
+            .services h2 {
+                font-size: 1.5em;
+            }
+            .services .service-link {
+                width: calc(100% - 40px);
+                margin: 10px auto;
+                padding: 15px;
+            }
+            .services .service-link h3 {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header img {
+                max-height: 60px;
+            }
+            header h1 {
+                font-size: 1.5em;
+            }
+            header p {
+                font-size: 0.9em;
+            }
+            .hero h1 {
+                font-size: 1.5em;
+            }
+            .hero p {
+                font-size: 0.9em;
+            }
+            .services h2 {
+                font-size: 1.2em;
+            }
+            .services .service-link {
+                width: calc(100% - 20px);
+                margin: 10px 0;
+                padding: 10px;
+            }
+            .services .service-link h3 {
+                font-size: 1.3em;
+            }
+            .nav-links a {
+                font-size: 0.7em;
+                padding: 5px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="G-Star Computer Centre Logo">
+            <div>
+                <h1>G-Star Computer Centre</h1>
+                <p>Your One-Stop Solution for All Online Services</p>
+            </div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="home">Home</a>
+            <a href="contactus.html" class="contact">Contact Us</a>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to G-Star Computer Centre</h1>
+            <p>Providing Top-Notch Online Services to Meet Your Every Need</p>
+        </div>
+    </section>
+    <section class="services">
+        <h2>Our Services</h2>
+        <a href="education.html" class="service-link">
+            <h3>Education</h3>
+            <p>Explore our educational services and courses tailored for your learning needs.</p>
+            <span>Learn More</span>
+        </a>
+        <a href="generalservices.html" class="service-link">
+            <h3>General Services</h3>
+            <p>Discover our general services that cater to a variety of technical needs.</p>
+            <span>Learn More</span>
+        </a>
+    </section>
+    <footer>
+        <p>&copy; 2024 G-Star Computer Centre | 
+        <a href="privacy-policy.html">Privacy Policy</a> | 
+        <a href="contactus.html">Contact Us</a></p>
+    </footer>
+</body>
+</html>
